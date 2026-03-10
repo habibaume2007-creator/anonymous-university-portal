@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Student Problem Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>🎓 Student Problem Portal</h1>
+        <p class="subtitle">Discuss Problems Anonymously • No Names • No Roll Numbers</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- POST NEW PROBLEM SECTION -->
+        <div class="section post-section">
+            <h2>📝 Post Your Problem Anonymously</h2>
+            
+            <form id="problemForm">
+                <label for="category"><strong>1. Select Category:</strong></label>
+                <select id="category" required>
+                    <option value="">-- Choose a Category --</option>
+                    <option value="subject">📚 Subject-Related Problems</option>
+                    <option value="scam">⚠️ Scams/Harassment</option>
+                    <option value="academic">🎯 Academic Issues</option>
+                    <option value="administrative">📋 Administrative Issues</option>
+                    <option value="hostel">🏠 Hostel & Accommodation</option>
+                    <option value="facilities">🏢 Campus Facilities</option>
+                    <option value="other">❓ Other</option>
+                </select>
+
+                <label for="problem"><strong>2. Describe Your Problem:</strong></label>
+                <textarea 
+                    id="problem" 
+                    placeholder="Write your problem clearly. Be specific and detailed. Example: I don't understand circular linked lists in Data Structures..."
+                    required
+                    rows="6"
+                ></textarea>
+
+                <label for="anonymous"><strong>3. Email (Optional - for updates only):</strong></label>
+                <input 
+                    type="email" 
+                    id="anonymous" 
+                    placeholder="Leave blank to stay completely anonymous"
+                >
+                <small>Note: Email won't be shown to others</small>
+
+                <button type="submit" class="btn-submit">🚀 Submit Problem Anonymously</button>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display:none;">
+                ✅ Your problem has been posted anonymously! Others can now see and discuss it.
+            </div>
+        </div>
+
+        <!-- VIEW PROBLEMS SECTION -->
+        <div class="section view-section">
+            <h2>💬 Recent Problems & Discussions</h2>
+            
+            <div class="filter">
+                <label><strong>Filter by Category:</strong></label>
+                <select id="filterCategory">
+                    <option value="">All Categories</option>
+                    <option value="subject">📚 Subject-Related</option>
+                    <option value="scam">⚠️ Scams/Harassment</option>
+                    <option value="academic">🎯 Academic Issues</option>
+                    <option value="administrative">📋 Administrative</option>
+                    <option value="hostel">🏠 Hostel</option>
+                    <option value="facilities">🏢 Facilities</option>
+                    <option value="other">❓ Other</option>
+                </select>
+            </div>
+
+            <div id="problemsList" class="problems-list">
+                <p class="loading">Loading problems...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
