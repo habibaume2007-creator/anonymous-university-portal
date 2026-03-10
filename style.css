@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #1e3a8a;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+select, textarea, input[type="email"] {
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+}
+
+select:focus, textarea:focus, input[type="email"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+small {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    transform: scale(1.05);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+/* SUCCESS MESSAGE */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+/* FILTER */
+.filter {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filter label {
+    margin: 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.filter select {
+    padding: 8px 12px;
+    margin: 0;
+    min-width: 200px;
+}
+
+/* PROBLEMS LIST */
+.problems-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.problem {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #667eea;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.problem:hover {
+    transform: translateX(5px);
+}
+
+.problem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.problem h3 {
+    color: #1e3a8a;
+    font-size: 1.2em;
+}
+
+.problem-category {
+    display: inline-block;
+    background-color: #667eea;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.problem-text {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.problem-meta {
+    color: #666;
+    font-size: 0.9em;
+    display: flex;
+    gap: 15px;
+}
+
+.problem-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.loading {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+}
+
+.no-problems {
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    font-size: 1.1em;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .navbar h1 {
+        font-size: 1.8em;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .problem-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .problem-category {
+        margin-top: 10px;
+    }
+}
